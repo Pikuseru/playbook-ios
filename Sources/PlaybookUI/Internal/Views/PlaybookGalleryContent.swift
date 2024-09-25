@@ -63,7 +63,7 @@ internal struct PlaybookGalleryContent: View {
                     .ignoresSafeArea()
             }
             .ignoresSafeArea(.keyboard)
-            .sheet(item: $galleryState.selected) { data in
+            .fullScreenCover(item: $galleryState.selected) { data in
                 GalleryDetail(data: data)
             }
             .toolbar {
