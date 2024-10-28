@@ -18,15 +18,11 @@ internal struct PlaybookCatalogContent: View {
 
     var body: some View {
         Group {
-            if #available(iOS 17.0, *) {
-                switch (horizontalSizeClass, verticalSizeClass) {
-                case (.regular, .regular):
-                    CatalogSplit()
+            switch (horizontalSizeClass, verticalSizeClass) {
+            case (.regular, .regular):
+                CatalogSplit()
 
-                default:
-                    CatalogDrawer()
-                }
-            } else {
+            default:
                 CatalogDrawer()
             }
         }
